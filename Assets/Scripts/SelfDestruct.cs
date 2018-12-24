@@ -8,6 +8,7 @@ public class SelfDestruct : MonoBehaviour {
     public float destructTime;
     public float dmg;
     public GameObject source;
+    public Color color;
 
 	// Use this for initialization
 	void Awake () {
@@ -15,6 +16,11 @@ public class SelfDestruct : MonoBehaviour {
         intTime = Time.time;
 		
 	}
+
+    private void Start()
+    {
+        GetComponent<Light>().color = color;
+    }
 
     void OnTriggerEnter(Collider other)
     {

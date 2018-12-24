@@ -16,20 +16,9 @@ public class Enemy : MonoBehaviour {
     public GameObject projectile;
     public Transform spawnPoint;
     public Transform model;
-    public GameObject eneHP;
-    public Canvas canvas;
-    GameObject e;
+  
 
     bool LOS = true;
-
-    void Awake()
-    {
-        e = (GameObject)Instantiate(eneHP);
-
-        e.transform.SetParent(canvas.transform);
-        e.GetComponent<EnemyHealth>().source = GetComponent<Enemy>();
-
-    }
 
     // Use this for initialization
     void Start()
@@ -37,6 +26,7 @@ public class Enemy : MonoBehaviour {
 
         rb = GetComponent<Rigidbody>();
         model = transform.GetChild(0);
+        player = FindObjectOfType<Player>().transform;
 
     }
 
@@ -67,7 +57,7 @@ public class Enemy : MonoBehaviour {
 
         if (hp <= 0)
         {
-            Destroy(e);
+            
             Destroy(gameObject);
             
         }

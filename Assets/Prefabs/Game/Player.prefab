@@ -48,8 +48,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178178887142024}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -173,12 +173,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 200
   projSpeed: 10
-  rps: 1
+  rps: 1.85
   dmg: 50
-  m_moveVel: 200
+  m_moveVel: 300
   projectile: {fileID: 1718515047500928, guid: a958ca5fa031f4343b3fee1bfc18ec90, type: 3}
   spawnPoint: {fileID: 4527860411319602}
-  controller: 0
+  controller: 1
 --- !u!1 &1947274274229570
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947274274229570}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -351,16 +351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.7058824
-      objectReference: {fileID: 0}
-    - target: {fileID: 7048201285473661397, guid: f746fd8e60640674bb0affc71a7615a0,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7048201285473661397, guid: f746fd8e60640674bb0affc71a7615a0,
-        type: 3}
-      propertyPath: m_Range
-      value: 1.3333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f746fd8e60640674bb0affc71a7615a0, type: 3}

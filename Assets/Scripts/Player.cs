@@ -102,6 +102,7 @@ public class Player : MonoBehaviour
             {
                 GameObject p = (GameObject)Instantiate(projectile, spawnPoint.position, transform.rotation);
 
+                //p.GetComponentInChildren<Light>().color = new Color(0, 123, 180,255);
                 p.GetComponent<SelfDestruct>().source = gameObject;
                 p.GetComponent<SelfDestruct>().dmg = dmg;
                 p.GetComponent<Rigidbody>().velocity = transform.forward * projSpeed;
